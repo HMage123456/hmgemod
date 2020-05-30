@@ -51,12 +51,12 @@ HMage Modで使用できるコマンドを紹介します。
  * /name <mcid>
    * 指定したプレイヤーのmcid変更履歴を表示します。`<mcid>`には現在のmcidを指定する必要があります。
 
+
 既存のバグ
 ------
 HMage Modには以下のバグが存在します。
  * インベントリを開いたときに、自分自身が少し暗く表示される。
  * Capeが数ピクセスずれて表示される。
-
 
 Global Cape
 ------
@@ -64,7 +64,7 @@ HMage Modを導入している場合、特定プレイヤーのCapeは通常のO
 ```
 例：プレイヤーAはMinecon Capeを持っていませんが、HMage Mod利用者からはプレイヤーAがMinecon Cape2013を設定しているように表示される。
 ```
-HMage Modでは上記のようなCapeをGlobal Capeと呼んでいます。Global Capeの設定には開発者の手間が発生するため、通常利用者には設定することができません。
+HMage Modでは上記のようなCapeをGlobal Capeと呼んでいます。Global Capeの設定には開発者の手間が発生するため、通常利用者は設定することができません。
 
 
  通信仕様
@@ -75,3 +75,13 @@ HMage Modでは以下の外部通信が発生します。HMage Modでは下記�
  * api.mojang.com
    * nameコマンド実行時にMojang APIを実行し、mcidの変更履歴を取得します。   
 
+問い合わせ
+------
+何かありましたら以下の開発者までどうぞ。
+ * Onimen ([Twitter](https://twitter.com/Onim_en))
+ * Namiken ([Twitter](https://twitter.com/namiken1993))
+
+ライセンス
+------
+* ソースコード：[MMPL-1.0](https://github.com/BuildCraft/BuildCraft/blob/6.1.x/buildcraft_resources/LICENSE.txt)
+* リソース(assets)：CC-BY-NC
