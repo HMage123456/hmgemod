@@ -32,5 +32,17 @@ HMage ModはShotbowのAnnihilationを有意義に遊ぶために開発されたM
  * ArmorDurabilityHUD:
     * 防具と手持ちアイテムの耐久値をプレイ中の画面に表示します。
  * CpsCounter:
-    *1秒間当たりのクリック数を表示します。
+    * 1秒間当たりのクリック数を表示します。
+ * AcroJumpHUD:
+    * アクロジャンプの残り時間をプレイ中の画面に表示します。ShotbowのAnnihilationでアクロバットを選択している場合のみ表示されます。
+ * KillCountHUD:
+    * 他のプレイヤーのキル数をプレイ中の画面に表示します。ShotbowのAnnihilationをプレイ中の場合のみ表示されます。
+ * NexusDamageHUD: (開発中)
+    * ネクサスダメージ数を表示します。ShotbowのAnnihilationをプレイ中の場合のみ表示されます。
+ * Cape: 
+    * 自身が装備するCape(マント)を選択できます。ここで選択したCapeは他のプレイヤーには表示されません。
+ * Aim Game: 
+    * Aim力を鍛えるゲーム (like Shoot)をプレイします。Annihilationの待ち時間を有効に使いたい場合などどうぞ。
+
+    
  
