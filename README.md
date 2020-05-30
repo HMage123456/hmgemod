@@ -1,4 +1,4 @@
-HMage Mod
+HMage Mod (まだ公開してないです)
 ===============================================
 
 Minecraft Java Edition for ver1.2.2 
