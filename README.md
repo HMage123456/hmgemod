@@ -1,7 +1,7 @@
 HMage Mod (まだ公開してないです)
 ===============================================
 
-Minecraft Java Edition for ver1.2.2 
+for Minecraft Java Edition ver 1.12.2 
 
 HMage Modについて
 ------
@@ -9,7 +9,7 @@ HMage ModはShotbowのAnnihilationを有意義に遊ぶために開発されたM
 ノックバックの調整やAimアシストなどのPVPが有利になる機能は一切実装されていません。
 詳細な機能については、「機能仕様」を御覧ください。
 
-また、HMage ModはMinecraft 1.2.2のForge用Modです。Forge以外のClientでは利用することができません。
+また、HMage ModはMinecraft 1.12.2のForge用Modです。Forge以外のClientでは利用することができません。
 
 
 機能仕様
