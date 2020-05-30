@@ -12,7 +12,7 @@ HMage ModはShotbowのAnnihilationを有意義に遊ぶために開発されたM
 また、HMage ModはMinecraft 1.2.2のForge用Modです。Forge以外のClientでは利用することができません。
 
 
-機能詳細
+機能仕様
 ------
 ゲーム中に「p」キーを押すことでメニューを開くことができます。
 メニューの詳細は以下の通りです。
@@ -42,7 +42,18 @@ HMage ModはShotbowのAnnihilationを有意義に遊ぶために開発されたM
  * Cape: 
     * 自身が装備するCape(マント)を選択できます。ここで選択したCapeは他のプレイヤーには表示されません。
  * Aim Game: 
-    * Aim力を鍛えるゲーム (like Shoot)をプレイします。Annihilationの待ち時間を有効に使いたい場合などどうぞ。
+    * Aim力を鍛えるゲーム (same as Shoot)をプレイします。Annihilationの待ち時間を有効に使いたい場合などどうぞ。
 
-    
- 
+コマンド仕様
+------
+ * /name <mcid>
+   * 指定したプレイヤーのmcid変更履歴を表示します。`<mcid>`には現在のmcidを指定する必要があります。
+
+ 通信仕様
+------
+HMage Modでは以下の外部通信が発生します。HMage Modでは下記以外の通信を行うことはありません。他のModやMinecraftクライアント本体はその限りではありません。
+ * github.com
+   * Mod起動時に特定プレイヤーのCape情報など、全Modで共有する情報をGithubから取得します。
+ * api.mojang.com
+   * nameコマンド実行時にMojang APIを実行し、mcidの変更履歴を取得します。   
+
