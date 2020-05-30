@@ -7,7 +7,7 @@ HMage Modについて
 ------
 HMage ModはShotbowのAnnihilationを有意義に遊ぶために開発されたModです。
 ノックバックの調整やAimアシストなどのPVPが有利になる機能は一切実装されていません。
-詳細な機能については、「機能紹介」を御覧ください。
+詳細な機能については、「機能仕様」を御覧ください。
 
 また、HMage ModはMinecraft 1.2.2のForge用Modです。Forge以外のClientでは利用することができません。
 
@@ -18,7 +18,7 @@ HMage ModはShotbowのAnnihilationを有意義に遊ぶために開発されたM
 メニューの詳細は以下の通りです。
 
  * HMage Mod: 
-    * HMage Modを完全に無効にします。
+    * HMage Modを無効にします。
  * MatchHistory: (開発中)
     * Annihilationの試合の履歴を閲覧します。
  * HideRecipeBook:
@@ -44,16 +44,38 @@ HMage ModはShotbowのAnnihilationを有意義に遊ぶために開発されたM
  * Aim Game: 
     * Aim力を鍛えるゲーム (same as Shoot)をプレイします。Annihilationの待ち時間を有効に使いたい場合などどうぞ。
 
+
 コマンド仕様
 ------
+HMage Modで使用できるコマンドを紹介します。
  * /name <mcid>
    * 指定したプレイヤーのmcid変更履歴を表示します。`<mcid>`には現在のmcidを指定する必要があります。
+
+
+Global Cape
+------
+HMage Modを導入している場合、特定プレイヤーのCapeは通常のOptifine CapeやMinecon Capeとは別のものが表示されます。
+```
+例：プレイヤーAはMinecon Capeを持っていませんが、HMage Mod利用者からはプレイヤーAがMinecon Cape2013を設定しているように表示される。
+```
+HMage Modでは上記のようなCapeをGlobal Capeと呼んでいます。Global Capeの設定には開発者の手間が発生するため、通常利用者は設定することができません。
+
 
  通信仕様
 ------
 HMage Modでは以下の外部通信が発生します。HMage Modでは下記以外の通信を行うことはありません。他のModやMinecraftクライアント本体はその限りではありません。
  * github.com
-   * Mod起動時に特定プレイヤーのCape情報など、全Modで共有する情報をGithubから取得します。
+   * Global Cape情報など、全Modで共有する情報をMod起動時にGithubから取得します。
  * api.mojang.com
    * nameコマンド実行時にMojang APIを実行し、mcidの変更履歴を取得します。   
 
+問い合わせ
+------
+何かありましたら以下の開発者までどうぞ。
+ * Onimen ([Twitter](https://twitter.com/Onim_en))
+ * Namiken ([Twitter](https://twitter.com/namiken1993))
+
+ライセンス
+------
+* ソースコード：[MMPL-1.0](https://github.com/BuildCraft/BuildCraft/blob/6.1.x/buildcraft_resources/LICENSE.txt)
+* リソース(assets)：CC-BY-NC
