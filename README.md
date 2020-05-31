@@ -36,7 +36,7 @@ HMage ModはShotbowのAnnihilationを有意義に遊ぶために開発されたM
  * AcroJumpHUD:
     * アクロジャンプの残り時間をプレイ中の画面に表示します。ShotbowのAnnihilationでアクロバットを選択している場合のみ表示されます。
  * KillCountHUD:
-    * 他のプレイヤーのキル数をプレイ中の画面に表示します。ShotbowのAnnihilationをプレイ中の場合のみ表示されます。
+    * キル数をプレイ中の画面に表示します。ShotbowのAnnihilationをプレイ中の場合のみ表示されます。
  * NexusDamageHUD: (開発中)
     * ネクサスダメージ数を表示します。ShotbowのAnnihilationをプレイ中の場合のみ表示されます。
  * Cape: 
