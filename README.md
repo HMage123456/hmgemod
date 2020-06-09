@@ -1,6 +1,8 @@
 HMage Mod (まだ公開してないです)
 ===============================================
 
+![Features](screenshots.png)
+
 for Minecraft Java Edition ver 1.12.2 
 
 HMage Modについて
@@ -14,17 +16,21 @@ HMage ModはShotbowのAnnihilationを有意義に遊ぶために開発されたM
 
 機能仕様
 ------
-ゲーム中に「p」キーを押すことでメニューを開くことができます。
+ゲーム中に「P」キーを押すことでメニューを開くことができます。
 メニューの詳細は以下の通りです。
 
  * HMage Mod: 
     * HMage Modを無効にします。
- * MatchHistory:
+ * Match History:
     * Annihilationの試合の履歴を閲覧します。キル数やネクダメ数などを確認できます。
+ * Layout of HUD:
+    * HUDのレイアウトをカスタマイズできます。
  * HideRecipeBook:
     * レシピブックを無効にできます。「enable」を選択した場合は、インベントリ内のレシピブックをクリックしてもレシピブックが開きません。
  * DisableSpeedFOV: 
     * スピードエフェクト効果時に、視野が広くならないようにします。
+ * CustomGuiBackground:   
+    * GUIの背景色をカラーピッカーで選ぶことができます。
  * ArrowCountHUD:
     * インベントリ内の矢の本数をプレイ中の画面に表示します。
  * StatusEffectHUD:
@@ -43,7 +49,8 @@ HMage ModはShotbowのAnnihilationを有意義に遊ぶために開発されたM
     * 自身が装備するCape(マント)を選択できます。ここで選択したCapeは他のプレイヤーには表示されません。
  * Aim Game: 
     * Aim力を鍛えるゲーム (same as Shoot)をプレイします。Annihilationの待ち時間を有効に使いたい場合などどうぞ。
-
+ * Hurting Armor:
+    * 敵を殴ったとき、敵の防具に色が付き分かりやすくなります。また、その色をカラーピッカーで選べます。
 
 デフォルトの挙動の変更
 ------
@@ -65,7 +72,9 @@ HMage Modで使用できるコマンドを紹介します。
 既存のバグ
 ------
 HMage Modには以下のバグが存在します。
- * メニューを開いたときに、画面サイズによってはメニューサイズがずれる可能性がある。
+ * 現在は特になし。
+ 
+バグを見つけた方は問い合わせから開発者に連絡を下さると助かります。GitHubを使える方はissueから報告してもらえるとありがたいです。
 
 Global Cape
 ------
