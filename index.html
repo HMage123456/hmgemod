@@ -1,1 +1,184 @@
-<p>404 onimen is in the bed now...</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMage 1 - Forge Client Mod</title>
+  </head>
+  <style>
+    .font-sawarabi {
+      font-family: "Sawarabi Gothic", sans-serif;
+    }
+    .bound::before {
+      content: "";
+      display: block;
+      height: 6rem;
+      margin-top: -6rem;
+      visibility: hidden;
+    }
+  </style>
+  <body class="text-base antialiased tracking-normal leading-relaxed text-gray-600 font-sawarabi min-h-screen">
+    <div id="header" class="bg-white fixed top-0 left-0 w-screen h-16 inset-x-0 border-b z-50 items-center">
+      <div class="w-full max-w-screen-xl relative mx-auto px-6">
+        <div class="flex items-senter">
+          <div id="logo" class="w-auto">
+            <a href="/">
+              <h1 class="text-2xl font-black tracking-widest">HMage Mod(Working in Process)</h1>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container" class="w-full max-w-screen-xl relative mx-auto pt-24 px-16 z-0">
+      <div class="lg:flex flex-row">
+        <div
+          id="sidebar"
+          class="hidden fixed inset-0 pt-16 h-full bg-white z-10 w-full border-b -mb-16 lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0 xl:w-1/5"
+        >
+          <ul>
+            <li>
+              <a href="#summary" class="text-blue-600 hover:text-blue-800">概要</a>
+            </li>
+            <li>
+              <a href="#features" class="text-blue-600 hover:text-blue-800">特徴</a>
+            </li>
+            <li>
+              <a href="#commands" class="text-blue-600 hover:text-blue-800">コマンド</a>
+            </li>
+            <li>
+              <a href="#terms" class="text-blue-600 hover:text-blue-800">規約</a>
+            </li>
+            <li>
+              <a href="#install" class="text-blue-600 hover:text-blue-800">インストール</a>
+            </li>
+            <li>
+              <a href="#contact" class="text-blue-600 hover:text-blue-800">問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+        <div id="content" class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-1/2 xl:w-3/4">
+          <div id="summary" class="px-6 pb-16 bound">
+            <h2 class="text-xl">概要</h2>
+            <h3 class="text-sm text-gray-400 pb-4">Summary</h3>
+            <p>
+              HMage ModはShotbowのAnnihilationを有意義に遊ぶためのModです。
+              ノックバックの調整やエイムアシストなどの、PVPが有利になる機能は一切実装されていません。
+              詳細な機能については、
+              <a href="#features" class="text-blue-600 hover:text-blue-800">特徴</a>
+              を御覧ください。
+            </p>
+            <p>
+              また、HMage ModはMinecraft1.12.2のForge Modです。Forge以外のClientでは利用することができません。
+            </p>
+          </div>
+          <div id="features" class="px-6 pb-16 bound">
+            <h2 class="text-xl">特徴</h2>
+            <h3 class="text-sm text-gray-400">Features</h3>
+            <p>
+              ゲーム中に「P」キーを押すことでメニューを開くことができます。 メニューの詳細は以下の通りです。
+            </p>
+            <ul class="list-inside pl-4">
+              <li class="pt-8">
+                <h3 class="text-lg">試合履歴を閲覧</h3>
+                <h4 class="text-xs text-gray-400">Match History</h4>
+                <div class="pl-4">
+                  <p>自分が参加したAnnihilationのゲームの履歴を見ることができます。</p>
+                </div>
+              </li>
+              <li class="pt-8">
+                <h3 class="text-lg">レシピブックを表示しない</h3>
+                <h4 class="text-xs text-gray-400">Hide Recipe book in Survival inventory</h4>
+                <div class="pl-4">
+                  <p>サバイバルインベントリのレシピブックを表示しません。もちろんクリックもできませんよ!</p>
+                </div>
+              </li>
+              <li class="pt-8">
+                <h3 class="text-lg">ステータス効果に影響されない視野</h3>
+                <h4 class="text-xs text-gray-400">FOV that doesnt affect by Status effect</h4>
+                <div class="pl-4">
+                  <p>俊敏と鈍足の効果による視野の変更をなくします。</p>
+                </div>
+              </li>
+              <li class="pt-8">
+                <h3 class="text-lg">GUIの背景をカスタマイズ</h3>
+                <h4 class="text-xs text-gray-400">Customize GUI background</h4>
+                <div class="pl-4">
+                  <p>GUIの背景色を好きな色にカスタマイズできます。</p>
+                </div>
+              </li>
+              <li class="pt-8">
+                <h3 class="text-lg">攻撃した敵を分かりやすく</h3>
+                <h4 class="text-xs text-gray-400">Colored enemy armor when you attacked</h4>
+                <div class="pl-4">
+                  <p>攻撃した敵の防具に色がつきます。もちろん好きな色に設定できます!</p>
+                </div>
+              </li>
+              <h2 class="text-lg pt-8">HUD</h2>
+              <hr />
+              <li class="pt-8">
+                <h3 class="text-lg">ステータス効果</h3>
+                <h4 class="text-xs text-gray-400">Status effect overlay</h4>
+                <div class="pl-4">
+                  <p>アクティブなステータス効果とその残り時間を表示します。</p>
+                </div>
+              </li>
+              <li class="pt-8">
+                <h3 class="text-lg">装備の耐久、手に持っているアイテム</h3>
+                <h4 class="text-xs text-gray-400">Durability of equipments and item in your hands</h4>
+                <div class="pl-4">
+                  <p>
+                    装備している防具や持っているアイテムの耐久、手に持っているアイテムの合計数を表示します。
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="commands" class="px-6 pb-16 bound">
+            <h2 class="text-xl">コマンド</h2>
+            <h3 class="text-sm text-gray-400">Commands</h3>
+          </div>
+          <div id="terms" class="px-6 pb-16 bound">
+            <h2 class="text-xl">規約</h2>
+            <h3 class="text-sm text-gray-400">Terms</h3>
+          </div>
+          <div id="install" class="px-6 pb-16 bound">
+            <h2 class="text-xl">インストール</h2>
+            <h3 class="text-sm text-gray-400">Install</h3>
+            <ol class="list-decimal list-inside">
+              <li>
+                Forge 1.12.2がインストールされていることを確認してください。
+              </li>
+              <li>
+                ダウンロードボタンからMODファイルをダウンロードしてください。
+              </li>
+              <li>
+                ダウンロードしたMODファイルを<code class="bg-gray-300 rounded px-2">mods</code
+                >フォルダに配置してください。
+              </li>
+            </ol>
+            <p>また、専用のディレクトリを作成することを推奨します。</p>
+            <div id="download" class="py-12">
+              <button
+                class="bg-gray-300 hover:bg-gray-400 text-gray-600 font-bold py-2 px-4 rounded inline-flex items-center focus:outline-none"
+              >
+                <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                </svg>
+                <span>Download</span>
+              </button>
+            </div>
+          </div>
+          <div id="contact" class="px-6 pb-16 bound">
+            <h2 class="text-xl">問い合わせ</h2>
+            <h3 class="text-sm text-gray-400">Contact</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="realtive bottom-0 flex items-center z-40">
+      <small class="w-screen text-center">&copy; 2020 Onimen</small>
+    </div>
+  </body>
+</html>
