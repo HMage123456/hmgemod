@@ -1,5 +1,6 @@
-HMage Mod (まだ公開してないです)
+HMage Mod 
 ===============================================
+ダウンロードは[こちらから](https://hmage123456.github.io/hmgemod/)
 
 ![Features](screenshots.png)
 
