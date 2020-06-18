@@ -1,0 +1,26 @@
+@tailwind base;
+
+.subject {
+  @apply px-6 pb-16;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+.font-sawarabi {
+  font-family: "Sawarabi Gothic", sans-serif;
+}
+.bound::before {
+  content: "";
+  display: block;
+  height: 6rem;
+  margin-top: -6rem;
+  visibility: hidden;
+}
+.link {
+  color: rgba(49, 130, 206, 255);
+}
+
+.link:hover {
+  color: rgba(44, 82, 130, 255);
+}
