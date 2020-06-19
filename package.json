@@ -17,6 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/vue-fontawesome": "^0.1.10",
     "autoprefixer": "^9.8.0",
+    "purgecss": "^2.3.0",
     "tailwindcss": "^1.4.6",
     "vue": "^2.5.11"
   },
@@ -26,6 +27,7 @@
     "not ie <= 8"
   ],
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",

@@ -1,13 +1,19 @@
 <template>
-  <div :id="id" class="subject bound">
-    <h2 class="text-xl border-b" slot="headline">
-      <fa class="mr-2" :icon="faPen" />概要
+  <div class="subject bound">
+    <h2 class="text-xl border-b">
+      <fa class="mr-2" :icon="icon" />
+      <slot name="title"></slot>
     </h2>
-    <h3 class="text-sm text-gray-400 pb-4" slot="sub">Summary</h3>
+    <h3 class="text-sm text-gray-400 pb-4">
+      <slot name="sub"></slot>
+    </h3>
+    <div class="lg:pl-4">
+      <slot name="sentence"></slot>
+    </div>
   </div>
 </template>
 <script>
 export default {
-  props: ["id"]
+  props: ["icon"]
 };
 </script>

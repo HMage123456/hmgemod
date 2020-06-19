@@ -9,8 +9,8 @@
         <p class="text-base text-gray-400">{{ slogan_sub }}</p>
       </div>
       <div class="py-8">
-        <x-download :isLatest="false" class="mx-4">Download Stable</x-download>
-        <x-download :isLatest="true" class="mx-4">Download Latest</x-download>
+        <x-download :isLatest="false" class="mx-4" />
+        <x-download :isLatest="true" class="mx-4" />
       </div>
     </div>
     <x-summary />
@@ -41,7 +41,7 @@ export default {
   },
   data() {
     return {
-      chassmode: Math.random() < 0.01,
+      chassmode: Math.random() < 0.05,
       slogan: this.chassmode ? "ﾁｬｽﾓﾊｧｰﾜ｣｡" : "日本人は HMage で圧倒的成長",
       slogan_sub: this.chassmode
         ? "CHASSMOHAUA"

@@ -1,27 +1,49 @@
 <template>
-  <div id="terms" class="subject bound">
-    <h2 class="text-xl border-b">規約</h2>
-    <h3 class="text-sm text-gray-400">Terms</h3>
-    <div>
-      <p>
-        <a href="https://github.com/Oni-Men/HMage" class="link">ソースコード</a
-        >:
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/BuildCraft/BuildCraft/blob/6.1.x/buildcraft_resources/LICENSE.txt"
-          class="link"
-          >[MMPL-1.0]</a
-        >
-      </p>
-      <p>リソース(assets)：CC-BY-NC</p>
+  <x-subject id="terms" :icon="faBookmark">
+    <span slot="title">規約</span>
+    <span slot="sub">Terms</span>
+    <div slot="sentence">
+      <ol class="w-1/2">
+        <li class="flex justify-between pb-6">
+          <x-link :new_tab="true" :url="'https://github.com/Oni-Men/HMage'">
+            ソースコード
+          </x-link>
+          <x-link
+            :new_tab="true"
+            :url="
+              'https://github.com/BuildCraft/BuildCraft/blob/6.1.x/buildcraft_resources/LICENSE.txt'
+            "
+          >
+            MMPL-1.0
+          </x-link>
+        </li>
+        <li class="flex justify-between">
+          <p>リソース(assets)</p>
+          <p class="text-base">
+            <fa :icon="faCreativeCommons" />
+            <fa :icon="faCreativeCommonsBy" />
+            <fa :icon="faCreativeCommonsNc" />
+          </p>
+        </li>
+      </ol>
     </div>
-  </div>
+  </x-subject>
 </template>
 <script>
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCreativeCommons,
+  faCreativeCommonsBy,
+  faCreativeCommonsNc
+} from "@fortawesome/free-brands-svg-icons";
 export default {
   data() {
-    return {};
+    return {
+      faBookmark,
+      faCreativeCommons,
+      faCreativeCommonsBy,
+      faCreativeCommonsNc
+    };
   }
 };
 </script>
