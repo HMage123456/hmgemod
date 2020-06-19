@@ -46,7 +46,9 @@ const vm = new Vue({
         .then(res => res.json())
         .then(json => {
           const url = json.assets[0].browser_download_url;
+          const download_count = json.assets[0].download_count;
           localStorage.setItem(url_key, url);
+          localStorage.setItem(url_key + ".download_count", download_count);
           localStorage.setItem(url_key + ".expiredAt", Date.now());
           return url;
         })

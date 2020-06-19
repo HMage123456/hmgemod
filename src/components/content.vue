@@ -1,7 +1,7 @@
 <template>
   <div
     id="content"
-    class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-1/2 xl:w-3/4"
+    class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
   >
     <div class="text-center lg:pt-16 lg:pb-12">
       <div id="slogan">

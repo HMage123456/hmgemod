@@ -1,7 +1,7 @@
 <template>
   <div
     id="sidebar"
-    class="hidden fixed inset-0 pt-16 h-full bg-white z-10 w-full lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block lg:border-0 xl:w-1/5"
+    class="hidden fixed inset-0 pt-16 h-full bg-white z-10 w-full lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/5 lg:block lg:border-0"
   >
     <div
       id="nav"

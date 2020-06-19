@@ -1,14 +1,15 @@
 const tailwindcss = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
 const purgecss = require("@fullhuman/postcss-purgecss")({
-  content: ["./src/**/*.vue"],
-  defaultExecutor: content => {
+  content: ["./index.html", "./src/**/*.vue"],
+  defaultExtractor: content => {
     const contentWithoutStyleBlocks = content.replace(
       /<style[^]+?<\/style>/gi,
       ""
     );
     return (
-      contentWithoutStyleBlocks.match(/[A-Za-z0-9-_/:]*[A-Za-z0-9-_/]+/g) || []
+      contentWithoutStyleBlocks.match(/[A-Za-z0-9\-_\/:]*[A-Za-z0-9\-_\/]+/g) ||
+      []
     );
   },
   whitelistPatterns: [
@@ -21,7 +22,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 module.exports = {
   plugins: [
     tailwindcss,
-    autoprefixer
-    //...(process.env.NODE_ENV === "production" ? [purgecss] : [])
+    autoprefixer,
+    ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
   ]
 };
