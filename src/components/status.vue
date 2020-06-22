@@ -32,12 +32,6 @@ export default {
   },
   methods: {
     close() {
-      // let reads = localStorage.getItem("hmage.fatal.reads");
-      // if (reads === null) {
-      //   reads = this.id;
-      // } else {
-      //   reads += `,${this.id}`;
-      // }
       this.message = null;
       localStorage.removeItem("hmage.fatal.title");
     }
