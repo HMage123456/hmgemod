@@ -7,9 +7,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.font-sawarabi {
-  font-family: "Sawarabi Gothic", sans-serif;
-}
 .bound::before {
   content: "";
   display: block;
@@ -23,4 +20,25 @@
 
 .link:hover {
   color: rgba(44, 82, 130, 255);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s !important;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.squash-enter-active,
+.squash-leave-active {
+  transform-origin: top center;
+  transition: transform 0.3s !important;
+}
+
+.squash-enter,
+.squash-leave-to {
+  transform: scaleY(0);
 }

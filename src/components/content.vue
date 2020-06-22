@@ -3,6 +3,7 @@
     id="content"
     class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
   >
+    <x-status />
     <div class="text-center lg:pt-16 lg:pb-12">
       <div id="slogan">
         <p class="text-3xl ">{{ slogan }}</p>
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+import XStatus from "./status.vue";
 import XSummary from "./contents/summary.vue";
 import XFeatures from "./contents/features.vue";
 import XCommands from "./contents/commands.vue";
@@ -32,6 +34,7 @@ import XContact from "./contents/contact.vue";
 
 export default {
   components: {
+    XStatus,
     XSummary,
     XFeatures,
     XCommands,
@@ -41,7 +44,7 @@ export default {
   },
   data() {
     return {
-      chassmode: Math.random() < 0.05,
+      chassmode: Math.random() < 0.079,
       slogan: this.chassmode ? "ﾁｬｽﾓﾊｧｰﾜ｣｡" : "日本人は HMage で圧倒的成長",
       slogan_sub: this.chassmode
         ? "CHASSMOHAUA"

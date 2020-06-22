@@ -1,7 +1,9 @@
-var path = require("path");
+const path = require("path");
+const VueLoaderPlugin = require("vue-loader").VueLoaderPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: "./src/main.js",
+  entry: ["@babel/polyfill", "./src/main.js"],
   output: {
     path: path.resolve(__dirname, "./built"),
     publicPath: "/built/",
@@ -11,7 +13,18 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["vue-style-loader", "css-loader"]
+        exclude: /node_modules/,
+        use: [
+          "vue-style-loader",
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: { importLoaders: 1 }
+          },
+          {
+            loader: "postcss-loader"
+          }
+        ]
       },
       {
         test: /\.vue$/,
@@ -25,15 +38,6 @@ module.exports = {
           loader: "babel-loader"
         },
         exclude: /node_modules/
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "[name].[ext]?[hash]"
-          }
-        }
       }
     ]
   },
@@ -48,5 +52,17 @@ module.exports = {
     noInfo: true,
     overlay: true
   },
-  devtool: "#eval-source-map"
+  devtool: "source-map",
+  plugins: [
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "style.css"
+    })
+  ]
 };
+
+if (process.env.NODE_ENV === "production") {
+  module.exports.mode = "production";
+} else {
+  module.exports.mode = "development";
+}

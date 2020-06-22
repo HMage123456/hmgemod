@@ -6,16 +6,23 @@
       @click="clicked"
       :disabled="download_url == null"
       id="download"
-      class="bg-gray-300 hover:bg-gray-400 text-gray-600 my-2 py-4 px-6 rounded inline-flex items-center focus:outline-none"
+      class="bg-gray-300 hover:bg-gray-400 text-gray-600 my-2 py-4 px-6 rounded-md shadow-md inline-flex items-center focus:outline-none"
     >
       <div class="mr-2">
         <fa class="text-2xl" :icon="faCloudDownloadAlt" />
       </div>
       <div>
         <span class="text-lg block leading-tight">{{ button_text }}</span>
-        <span class="text-sm text-gray-500 block leading-tight">
-          {{ display_text_sub }}
-        </span>
+        <div
+          class="text-sm text-gray-500 block leading-tight text-center w-full h-6"
+        >
+          <span v-if="!hovered">
+            {{ button_text_sub }}
+          </span>
+          <span v-if="hovered">
+            {{ download_count + " downloads" }}
+          </span>
+        </div>
       </div>
     </button>
   </a>
@@ -33,25 +40,20 @@ export default {
       button_text_sub: this.isLatest
         ? "Download latest version"
         : "Download stable version",
-      download_url: localStorage.getItem(this.$root.get_url_key(this.isLatest)),
+      download_url: localStorage.getItem(
+        this.$root.get_storage_key(this.isLatest, { type: "url" })
+      ),
       download_count: localStorage.getItem(
-        this.$root.get_url_key(this.isLatest) + ".download_count"
+        this.$root.get_storage_key(this.isLatest, { type: "count" })
       ),
       faCloudDownloadAlt
     };
-  },
-  computed: {
-    display_text_sub() {
-      return this.hovered
-        ? `${this.download_count} times`
-        : this.button_text_sub;
-    }
   },
   methods: {
     clicked() {
       this.download_count++;
       localStorage.setItem(
-        this.$root.get_url_key(this.isLatest) + ".download_count",
+        this.$root.get_storage_key(this.isLatest, { type: "count" }),
         this.download_count
       );
     }
