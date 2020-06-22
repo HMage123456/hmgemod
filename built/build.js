@@ -14083,6 +14083,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -24819,7 +24825,25 @@ var render = function() {
               attrs: { isLatest: false }
             }),
             _vm._v(" "),
-            _c("x-download", { staticClass: "mx-4", attrs: { isLatest: true } })
+            _c("x-download", {
+              staticClass: "mx-4",
+              attrs: { isLatest: true }
+            }),
+            _vm._v(" "),
+            _c(
+              "x-link",
+              {
+                attrs: {
+                  href: "https://github.com/HMage123456/hmgemod/releases",
+                  new_tab: true
+                }
+              },
+              [
+                _c("p", { staticClass: "pt-4" }, [
+                  _vm._v("全てのリリースはこちらから")
+                ])
+              ]
+            )
           ],
           1
         )

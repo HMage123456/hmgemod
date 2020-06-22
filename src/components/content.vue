@@ -12,6 +12,12 @@
       <div class="py-8">
         <x-download :isLatest="false" class="mx-4" />
         <x-download :isLatest="true" class="mx-4" />
+        <x-link
+          :href="'https://github.com/HMage123456/hmgemod/releases'"
+          :new_tab="true"
+        >
+          <p class="pt-4">全てのリリースはこちらから</p>
+        </x-link>
       </div>
     </div>
     <x-summary />
