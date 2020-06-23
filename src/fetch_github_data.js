@@ -12,7 +12,6 @@ export default {
       method: "GET"
     });
     const json = await res.json();
-    console.log(json);
     if (isLatest) {
       return {
         url: json[0].assets[0].browser_download_url,
