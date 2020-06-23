@@ -14089,6 +14089,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -14280,23 +14282,11 @@ __webpack_require__.r(__webpack_exports__);
         sub: "Match History",
         content: "自分が参加したAnnihilationのゲームの履歴を見ることができます。"
       }, {
-        id: "hide-recipe-book",
+        id: "minecraft-utils",
         icon: "",
-        title: "レシピブックを表示しない",
-        sub: "Hide recipe book in inventory",
-        content: "サバイバルインベントリと作業台のレシピ本を削除します。"
-      }, {
-        id: "fixed-fov",
-        icon: "",
-        title: "ステータス効果に影響されない視野",
-        sub: "FOV unaffected by Status effect",
-        content: "俊敏、鈍足の効果による視野への影響をなくします。"
-      }, {
-        id: "custom-gui-bg",
-        icon: "",
-        title: "GUIの背景をカスタマイズ",
-        sub: "Customize GUI background color",
-        content: "GUIの背景色を好きな色に設定で決ます。"
+        title: "より良いマイクラ・ライフ",
+        sub: "Utilities for Minecraft",
+        content: "GUIからレシピ本を削除したり、GUIの背景色を好きな色に変えたりすることができます。"
       }, {
         id: "colored-aromor",
         icon: "",
@@ -14304,58 +14294,33 @@ __webpack_require__.r(__webpack_exports__);
         sub: "Color the armor of an attacked enemy",
         content: "自分が攻撃した敵の防具に色が付きます。もちろん好きな色に設定できます！"
       }, {
-        id: "status-effect",
+        id: "huds",
         icon: "",
-        title: "ステータス効果",
-        sub: "Display information of your status effect",
-        content: "アクティブなステータス効果のアイコンとその残り時間を表示します。"
+        title: "様々なHUD",
+        sub: "Various useful HUDs",
+        content: "ステータス効果の残り時間や装備の耐久、CPSを画面に表示します。自由にレイアウトを決めることもできます。"
       }, {
-        id: "equipment-info",
+        id: "anni-utils",
         icon: "",
-        title: "装備の耐久、手に持っているアイテム",
-        sub: "Display information of equipment and item in your hands",
-        content: "装備の耐久や手に持っているアイテムの数を表示します。"
-      }, {
-        id: "cps-counter",
-        icon: "",
-        title: "CPSをカウントする",
-        sub: "Count and display your CPS",
-        content: "自分のCPSを表示します。"
-      }, {
-        id: "double-jump",
-        icon: "",
-        title: "ダブルジャンプのクールタイムを表示",
-        sub: "Display cooltime of DoubleJump. (Only in annihilation and using acrobat)",
-        content: "Annihilationでアクロバットをプレイ中のみ表示されます。"
-      }, {
-        id: "kill-counter",
-        icon: "",
-        title: "キル数をカウントする",
-        sub: "Display your kill count in the game. (Only in annihilation)",
-        content: "そのゲームで自分が敵をキルした回数を表示します。(Anni中のみ)"
-      }, {
-        id: "nexus-damage",
-        icon: "",
-        title: "ネクサスダメージをカウント",
-        sub: "Display your nexus damage in the game. (Only in annihilation)",
-        content: "そのゲームで自分がネクサスを削った回数を表示します。(Anni中のみ)"
-      }, {
-        id: "layout-hud",
-        icon: "",
-        title: "HUDを自由にレイアウト",
-        sub: "Lay out your HUD freely!",
-        content: "上に紹介したHUDを自由にレイアウトできます。"
+        title: "Annihilation向けの機能",
+        sub: "Features for Annihilation",
+        content: "現在のキル数やネクサスダメージ、ダブルジャンプのクールタイムを画面に表示します。"
       }, {
         id: "old-gui",
         icon: "",
         title: "古いテクスチャ",
         sub: "Old GUI",
         content: "スロットの位置を1.7.10時代のテクスチャに戻します。(クリエイティブインベントリ未対応)"
+      }, {
+        id: "discord-rpc",
+        icon: "",
+        title: "プレイ中のAnnihilationをDiscordに",
+        sub: "Send data of playing annihilation to Discord",
+        content: "プレイ中の試合のマップやフェーズ、色をDiscordに送ります。フレンドと一緒にプレイするとき、いちいち聞かれなくなります。(要出典)"
       }];
       return data;
     },
     onclick: function onclick(feature) {
-      //console.log(feature.title);
       this.$root.new(_feature_popup_vue__WEBPACK_IMPORTED_MODULE_1__["default"], { feature: feature });
     }
   }
@@ -14579,7 +14544,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -14599,6 +14563,11 @@ __webpack_require__.r(__webpack_exports__);
     clicked: function clicked() {
       this.download_count++;
       localStorage.setItem(this.$root.get_storage_key(this.isLatest, { type: "count" }), this.download_count);
+    },
+    mouseovered: function mouseovered() {
+      this.hovered = true;
+      this.download_url = localStorage.getItem(this.$root.get_storage_key(this.isLatest, { type: "url" }));
+      this.download_count = localStorage.getItem(this.$root.get_storage_key(this.isLatest, { type: "count" }));
     }
   }
 });
@@ -24831,18 +24800,21 @@ var render = function() {
             }),
             _vm._v(" "),
             _c(
-              "x-link",
-              {
-                attrs: {
-                  href: "https://github.com/HMage123456/hmgemod/releases",
-                  new_tab: true
-                }
-              },
+              "p",
+              { staticClass: "pt-4" },
               [
-                _c("p", { staticClass: "pt-4" }, [
-                  _vm._v("全てのリリースはこちらから")
-                ])
-              ]
+                _c(
+                  "x-link",
+                  {
+                    attrs: {
+                      href: "https://github.com/HMage123456/hmgemod/releases",
+                      new_tab: true
+                    }
+                  },
+                  [_vm._v("\n          全てのリリースはこちらから\n        ")]
+                )
+              ],
+              1
             )
           ],
           1
@@ -25342,11 +25314,11 @@ var render = function() {
       "button",
       {
         staticClass:
-          "bg-gray-300 hover:bg-gray-400 text-gray-600 my-2 py-4 px-6 rounded-md shadow-md inline-flex items-center focus:outline-none",
-        attrs: { disabled: _vm.download_url == null, id: "download" },
+          " bg-gray-300 hover:bg-gray-400 text-gray-600 my-2 py-4 px-6 rounded-md shadow-md inline-flex items-center focus:outline-none",
+        attrs: { id: "download" },
         on: {
           mouseover: function($event) {
-            _vm.hovered = true
+            return _vm.mouseovered()
           },
           mouseleave: function($event) {
             _vm.hovered = false
@@ -39456,10 +39428,8 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
             case 7:
               json = _context.sent;
 
-              console.log(json);
-
               if (!isLatest) {
-                _context.next = 11;
+                _context.next = 10;
                 break;
               }
 
@@ -39468,13 +39438,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                 count: json[0].assets[0].download_count
               });
 
-            case 11:
+            case 10:
               return _context.abrupt("return", {
                 url: json.assets[0].browser_download_url,
                 count: json.assets[0].download_count
               });
 
-            case 12:
+            case 11:
             case "end":
               return _context.stop();
           }
