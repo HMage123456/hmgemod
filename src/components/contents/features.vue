@@ -52,25 +52,12 @@ export default {
             "自分が参加したAnnihilationのゲームの履歴を見ることができます。"
         },
         {
-          id: "hide-recipe-book",
+          id: "minecraft-utils",
           icon: "",
-          title: "レシピブックを表示しない",
-          sub: "Hide recipe book in inventory",
-          content: "サバイバルインベントリと作業台のレシピ本を削除します。"
-        },
-        {
-          id: "fixed-fov",
-          icon: "",
-          title: "ステータス効果に影響されない視野",
-          sub: "FOV unaffected by Status effect",
-          content: "俊敏、鈍足の効果による視野への影響をなくします。"
-        },
-        {
-          id: "custom-gui-bg",
-          icon: "",
-          title: "GUIの背景をカスタマイズ",
-          sub: "Customize GUI background color",
-          content: "GUIの背景色を好きな色に設定で決ます。"
+          title: "より良いマイクラ・ライフ",
+          sub: "Utilities for Minecraft",
+          content:
+            "GUIからレシピ本を削除したり、GUIの背景色を好きな色に変えたりすることができます。"
         },
         {
           id: "colored-aromor",
@@ -81,57 +68,20 @@ export default {
             "自分が攻撃した敵の防具に色が付きます。もちろん好きな色に設定できます！"
         },
         {
-          id: "status-effect",
+          id: "huds",
           icon: "",
-          title: "ステータス効果",
-          sub: "Display information of your status effect",
+          title: "様々なHUD",
+          sub: "Various useful HUDs",
           content:
-            "アクティブなステータス効果のアイコンとその残り時間を表示します。"
+            "ステータス効果の残り時間や装備の耐久、CPSを画面に表示します。自由にレイアウトを決めることもできます。"
         },
         {
-          id: "equipment-info",
+          id: "anni-utils",
           icon: "",
-          title: "装備の耐久、手に持っているアイテム",
-          sub: "Display information of equipment and item in your hands",
-          content: "装備の耐久や手に持っているアイテムの数を表示します。"
-        },
-        {
-          id: "cps-counter",
-          icon: "",
-          title: "CPSをカウントする",
-          sub: "Count and display your CPS",
-          content: "自分のCPSを表示します。"
-        },
-        {
-          id: "double-jump",
-          icon: "",
-          title: "ダブルジャンプのクールタイムを表示",
-          sub:
-            "Display cooltime of DoubleJump. (Only in annihilation and using acrobat)",
-          content: "Annihilationでアクロバットをプレイ中のみ表示されます。"
-        },
-        {
-          id: "kill-counter",
-          icon: "",
-          title: "キル数をカウントする",
-          sub: "Display your kill count in the game. (Only in annihilation)",
+          title: "Annihilation向けの機能",
+          sub: "Features for Annihilation",
           content:
-            "そのゲームで自分が敵をキルした回数を表示します。(Anni中のみ)"
-        },
-        {
-          id: "nexus-damage",
-          icon: "",
-          title: "ネクサスダメージをカウント",
-          sub: "Display your nexus damage in the game. (Only in annihilation)",
-          content:
-            "そのゲームで自分がネクサスを削った回数を表示します。(Anni中のみ)"
-        },
-        {
-          id: "layout-hud",
-          icon: "",
-          title: "HUDを自由にレイアウト",
-          sub: "Lay out your HUD freely!",
-          content: "上に紹介したHUDを自由にレイアウトできます。"
+            "現在のキル数やネクサスダメージ、ダブルジャンプのクールタイムを画面に表示します。"
         },
         {
           id: "old-gui",
@@ -140,12 +90,19 @@ export default {
           sub: "Old GUI",
           content:
             "スロットの位置を1.7.10時代のテクスチャに戻します。(クリエイティブインベントリ未対応)"
+        },
+        {
+          id: "discord-rpc",
+          icon: "",
+          title: "プレイ中のAnnihilationをDiscordに",
+          sub: "Send data of playing annihilation to Discord",
+          content:
+            "プレイ中の試合のマップやフェーズ、色をDiscordに送ります。フレンドと一緒にプレイするとき、いちいち聞かれなくなります。(要出典)"
         }
       ];
       return data;
     },
     onclick(feature) {
-      //console.log(feature.title);
       this.$root.new(XFeaturePopup, { feature });
     }
   }
