@@ -1,12 +1,11 @@
 <template>
   <a :href="download_url">
     <button
-      @mouseover="hovered = true"
+      @mouseover="mouseovered()"
       @mouseleave="hovered = false"
       @click="clicked"
-      :disabled="download_url == null"
       id="download"
-      class="bg-gray-300 hover:bg-gray-400 text-gray-600 my-2 py-4 px-6 rounded-md shadow-md inline-flex items-center focus:outline-none"
+      class=" bg-gray-300 hover:bg-gray-400 text-gray-600 my-2 py-4 px-6 rounded-md shadow-md inline-flex items-center focus:outline-none"
     >
       <div class="mr-2">
         <fa class="text-2xl" :icon="faCloudDownloadAlt" />
@@ -55,6 +54,15 @@ export default {
       localStorage.setItem(
         this.$root.get_storage_key(this.isLatest, { type: "count" }),
         this.download_count
+      );
+    },
+    mouseovered() {
+      this.hovered = true;
+      this.download_url = localStorage.getItem(
+        this.$root.get_storage_key(this.isLatest, { type: "url" })
+      );
+      this.download_count = localStorage.getItem(
+        this.$root.get_storage_key(this.isLatest, { type: "count" })
       );
     }
   }
