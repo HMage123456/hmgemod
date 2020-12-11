@@ -33,9 +33,7 @@ export default {
   data() {
     return {
       hovered: false,
-      button_text: this.isLatest
-        ? "最新版をダウンロード"
-        : "安定版をダウンロード",
+      button_text: "最新版をダウンロード",
       button_text_sub: this.isLatest
         ? "Download latest version"
         : "Download stable version",

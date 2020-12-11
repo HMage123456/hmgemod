@@ -17,7 +17,6 @@
             @click="onclick(feature)"
             class="p-4 rounded-md shadow-md h-48 overflow-y-hidden white-out cursor-pointer"
           >
-            <img :src="feature.icon" />
             <h3 class="text-base text-center">{{ feature.title }}</h3>
             <h4 class="text-xs text-center text-gray-400">{{ feature.sub }}</h4>
             <div class="pl-4">
@@ -50,6 +49,13 @@ export default {
           sub: "Match History",
           content:
             "自分が参加したAnnihilationのゲームの履歴を見ることができます。"
+        },
+        {
+          id: "cutomize-font",
+          icon: "",
+          title: "フォントをカスタマイズ",
+          sub: "Customize Font",
+          content: "PCにインストールしたフォントをゲーム内で使用できます。"
         },
         {
           id: "minecraft-utils",

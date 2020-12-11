@@ -10,7 +10,6 @@
         <p class="text-base text-gray-400">{{ slogan_sub }}</p>
       </div>
       <div class="py-8">
-        <x-download :isLatest="false" class="mx-4" />
         <x-download :isLatest="true" class="mx-4" />
         <p class="pt-4">
           <x-link
@@ -48,7 +47,8 @@ export default {
     XCommands,
     XTerms,
     XInstall,
-    XContact
+    XContact,
+    XReleaseNote
   },
   data() {
     return {

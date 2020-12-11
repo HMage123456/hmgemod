@@ -14090,7 +14090,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -14108,7 +14107,8 @@ __webpack_require__.r(__webpack_exports__);
     XCommands: _contents_commands_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     XTerms: _contents_terms_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
     XInstall: _contents_install_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    XContact: _contents_contact_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+    XContact: _contents_contact_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    XReleaseNote: XReleaseNote
   },
   data: function data() {
     return {
@@ -14260,7 +14260,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -14281,6 +14280,12 @@ __webpack_require__.r(__webpack_exports__);
         title: "試合履歴を閲覧",
         sub: "Match History",
         content: "自分が参加したAnnihilationのゲームの履歴を見ることができます。"
+      }, {
+        id: "cutomize-font",
+        icon: "",
+        title: "フォントをカスタマイズ",
+        sub: "Customize Font",
+        content: "PCにインストールしたフォントをゲーム内で使用できます。"
       }, {
         id: "minecraft-utils",
         icon: "",
@@ -14551,7 +14556,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       hovered: false,
-      button_text: this.isLatest ? "最新版をダウンロード" : "安定版をダウンロード",
+      button_text: "最新版をダウンロード",
       button_text_sub: this.isLatest ? "Download latest version" : "Download stable version",
       download_url: localStorage.getItem(this.$root.get_storage_key(this.isLatest, { type: "url" })),
       download_count: localStorage.getItem(this.$root.get_storage_key(this.isLatest, { type: "count" })),
@@ -24791,11 +24796,6 @@ var render = function() {
           [
             _c("x-download", {
               staticClass: "mx-4",
-              attrs: { isLatest: false }
-            }),
-            _vm._v(" "),
-            _c("x-download", {
-              staticClass: "mx-4",
               attrs: { isLatest: true }
             }),
             _vm._v(" "),
@@ -25030,8 +25030,6 @@ var render = function() {
                   }
                 },
                 [
-                  _c("img", { attrs: { src: feature.icon } }),
-                  _vm._v(" "),
                   _c("h3", { staticClass: "text-base text-center" }, [
                     _vm._v(_vm._s(feature.title))
                   ]),
