@@ -47,8 +47,7 @@ export default {
     XCommands,
     XTerms,
     XInstall,
-    XContact,
-    XReleaseNote
+    XContact
   },
   data() {
     return {
