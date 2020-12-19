@@ -1,43 +1,25 @@
 export default {
-  /**
-   *
-   * @param {*} isLatest fetch data of pre-release if true
-   */
-  async get_download_data(isLatest) {
+  async get_download_data() {
     console.log("Fetching download url from github");
-    const url =
-      "https://api.github.com/repos/hmage123456/hmgemod/releases" +
-      (isLatest ? "" : "/latest");
+    const url = "https://api.github.com/repos/hmage123456/hmgemod/releases";
     const res = await fetch(url, {
       method: "GET"
     });
     const json = await res.json();
-    if (isLatest) {
-      return {
-        url: json[0].assets[0].browser_download_url,
-        count: json[0].assets[0].download_count
-      };
-    }
-    return {
-      url: json.assets[0].browser_download_url,
-      count: json.assets[0].download_count
-    };
-  },
 
-  async get_fatal_issue_title() {
-    const res = await fetch(
-      "https://api.github.com/repos/hmage123456/hmgemod/issues?labels=fatal&sort=updated&direction=desc",
-      {
-        method: "GET"
+    console.log(json);
+
+    const total = json.reduce((accumulator, current) => {
+      if (current.assets === undefined || current.assets[0] === undefined) {
+        return accumulator;
       }
-    );
-    const json = await res.json();
-    if (json.length != 0) {
-      return {
-        id: json[0].id,
-        title: json[0].title
-      };
-    }
-    return null;
+      return accumulator + current.assets[0].download_count;
+    }, 0);
+
+    return {
+      url: json[0].assets[0].browser_download_url,
+      count: json[0].assets[0].download_count,
+      total: total
+    };
   }
 };

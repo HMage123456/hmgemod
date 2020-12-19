@@ -18,7 +18,7 @@
       </ol>
       <p>また、専用のディレクトリを作成することを推奨します。</p>
       <div class="flex justify-end py-8 w-1/2">
-        <x-download :isLatest="false" />
+        <x-download />
       </div>
     </div>
   </x-subject>
