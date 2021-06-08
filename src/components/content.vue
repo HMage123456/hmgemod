@@ -51,11 +51,8 @@ export default {
   },
   data() {
     return {
-      chassmode: Math.random() < 0.079,
-      slogan: this.chassmode ? "ﾁｬｽﾓﾊｧｰﾜ｣｡" : "日本人は HMage で圧倒的成長",
-      slogan_sub: this.chassmode
-        ? "CHASSMOHAUA"
-        : "NIHONJIN HA HMAGE DE ATTOTEKI SEICHO"
+      slogan: "あなたのAnnihilation生活をより快適に",
+      slogan_sub: "Make your Annihilation life more comfortable"
     };
   }
 };

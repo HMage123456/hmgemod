@@ -16,11 +16,6 @@
       <p>そうでない方は開発者のツイッターにお願いします。</p>
       <ul class="list-disc pl-8">
         <li>
-          <x-link :new_tab="true" :url="'https://twitter.com/onim_en'">
-            Onimen
-          </x-link>
-        </li>
-        <li>
           <x-link :new_tab="true" :url="'https://twitter.com/namiken1993'">
             Namiken
           </x-link>
