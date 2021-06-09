@@ -1071,10 +1071,10 @@ img {
   transform: scale(0.9);
 }
 
-.white-out[data-v-443d1f88] {
+.white-out[data-v-3ac7207e] {
   position: relative;
 }
-.white-out[data-v-443d1f88]::after {
+.white-out[data-v-3ac7207e]::after {
   content: "";
   display: block;
   position: absolute;

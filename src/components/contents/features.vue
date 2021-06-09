@@ -74,6 +74,14 @@ export default {
             "自分が攻撃した敵の防具に色が付きます。もちろん好きな色に設定できます！"
         },
         {
+          id: "arrow-remover",
+          icon: "",
+          title: "刺さった矢を取り除く",
+          sub: "Time elapsed, remove arrows stuck in your body",
+          content:
+            "時間が経過しても体に刺さっている矢が消えないバグがあります。しかし、この機能があれば大丈夫です。矢が消えます。"
+        },
+        {
           id: "huds",
           icon: "",
           title: "様々なHUD",

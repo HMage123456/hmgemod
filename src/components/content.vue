@@ -51,8 +51,8 @@ export default {
   },
   data() {
     return {
-      slogan: "あなたのAnnihilation生活をより快適に",
-      slogan_sub: "Make your Annihilation life more comfortable"
+      slogan: "Annihilationをよりエキサイティングに!",
+      slogan_sub: "Make your anni more exciting"
     };
   }
 };
